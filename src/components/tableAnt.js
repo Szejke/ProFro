@@ -16,7 +16,7 @@ function TableAnt() {
 
   const getDataFetch = async () => {
 
-  await fetch('http://localhost:8080/dane-persons')
+  await fetch('https://my-projekt.herokuapp.com/dane-persons')
   .then(res => res.json())
   .then(res => {
     setData(res)
@@ -30,7 +30,7 @@ function TableAnt() {
 
 
   const daleteAction = async (record) => {
-    await fetch('http://localhost:8080//delete-dane-person/' + record.id , {
+    await fetch('https://my-projekt.herokuapp.com/delete-dane-person/' + record.id , {
       method: 'DELETE',
     })
       .then(res => res.json())
