@@ -10,7 +10,6 @@ import FormApplication from './components/addRow/applicationForm';
 const { Footer, Content } = Layout;
 
 
-
 function App() {
   return (
     <BrowserRouter>
