@@ -113,7 +113,7 @@ function FormApplication() {
         telephone,
       }
 
-      fetch('http://localhost:8080/insert-dane-person', {
+      fetch('https://my-projekt.herokuapp.com/insert-dane-person', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
