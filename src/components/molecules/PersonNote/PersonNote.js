@@ -14,6 +14,7 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   border-radius: 10px;
   padding: 2%;
+  max-width: 70rem;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -21,6 +22,7 @@ const StyledWrapper = styled.div`
 const StyledParagraphs = styled.div`
   margin-left: 30px;
 `;
+
 const StyledButton = styled.div`
   margin-left: auto;
   align-self: flex-end;

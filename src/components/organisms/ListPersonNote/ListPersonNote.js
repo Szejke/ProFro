@@ -13,7 +13,6 @@ const StyledWrapper = styled.div`
 
 const ListPersonNote = ({ workers }) => (
   <StyledWrapper>
-    {console.log(workers)}
     {workers.map(({ id, title, awatarUrl, mail, positionJob, relationWords }) => (
       <PersonNote
         key={id}

@@ -46,9 +46,6 @@ const InputArray = ({ id, label, variant, tags, setTags }) => {
 
   const onSubmit = () => {
     const error = tagtValidate(tag);
-    console.log(tags.length);
-    console.log(tags);
-
     if (!error) {
       setTags([
         ...tags,
