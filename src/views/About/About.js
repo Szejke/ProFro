@@ -5,26 +5,26 @@ import { aboutInfo } from 'data/about';
 
 const StyledWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const StyledLevel1 = styled.ul`
-  width: 80vw;
   display: flex;
-  margin: auto;
-  flex-direction: column;
+  justify-content: center;
 `;
 
 const StyledLevel2 = styled.ul`
-  width: 80vw;
   display: flex;
-  margin: auto;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const About = () => (
   <StyledWrapper>
     <StyledLevel1>
       <PersonAbout
+        unradius
         image={aboutInfo[0].image}
         name={aboutInfo[0].name}
         description={aboutInfo[0].description}

@@ -16,7 +16,9 @@ const StyledWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-const StyledLogo = styled.div``;
+const StyledLogo = styled.div`
+  margin-left: 2%;
+`;
 
 const StyledLinksHeader = styled.div`
   margin-left: auto;

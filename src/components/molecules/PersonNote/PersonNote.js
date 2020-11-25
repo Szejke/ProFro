@@ -34,6 +34,11 @@ const DeleteIcon = styled(DeleteForeverIcon)`
   }
 `;
 
+const StyledH1 = styled.h1`
+  margin-bottom: 1rem;
+  color: ${({ theme }) => theme.colorPrimary};
+`;
+
 const PersonNote = ({ id, title, awatarUrl, mail, positionJob, relationWords, removePerson }) => {
   const [relationWordsState] = useState(relationWords);
 
@@ -41,7 +46,7 @@ const PersonNote = ({ id, title, awatarUrl, mail, positionJob, relationWords, re
     <StyledWrapper>
       <AwatarPerson src={awatarUrl} />
       <StyledParagraphs>
-        <h1>{title}</h1>
+        <StyledH1>{title}</StyledH1>
         <p>{mail}</p>
         <p>{positionJob}</p>
         {relationWordsState.map((item) => (
