@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import ListPersonNote from 'components/organisms/ListPersonNote/ListPersonNote';
 import Add from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 import { Fab } from '@material-ui/core';
 import NewPersonBar from 'components/organisms/NewPersonBar/NewPersonBar';
 
@@ -43,7 +44,7 @@ const Home = () => {
       <ListPersonNote />
       <StyledButton>
         <Fab color="primary" aria-label="add" onClick={handleNewPersonBarToggle}>
-          <Add fontSize="large" />
+          {personBarVisible ? <RemoveIcon fontSize="large" /> : <Add fontSize="large" />}
         </Fab>
       </StyledButton>
       <StyledNewPersonBar isVisible={personBarVisible}>

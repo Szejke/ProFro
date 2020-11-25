@@ -6,6 +6,6 @@ import Table from './table';
 
 storiesOf('molecules/Table', module)
   .addDecorator(withKnobs)
-  .add('LinksHeader', () => {
+  .add('Table', () => {
     return <Table />;
   });

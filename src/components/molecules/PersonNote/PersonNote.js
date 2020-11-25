@@ -14,6 +14,7 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   border-radius: 10px;
   padding: 2%;
+  max-width: 70rem;
   align-items: center;
   flex-wrap: wrap;
 `;
@@ -21,6 +22,7 @@ const StyledWrapper = styled.div`
 const StyledParagraphs = styled.div`
   margin-left: 30px;
 `;
+
 const StyledButton = styled.div`
   margin-left: auto;
   align-self: flex-end;
@@ -32,6 +34,11 @@ const DeleteIcon = styled(DeleteForeverIcon)`
   }
 `;
 
+const StyledH1 = styled.h1`
+  margin-bottom: 1rem;
+  color: ${({ theme }) => theme.colorPrimary};
+`;
+
 const PersonNote = ({ id, title, awatarUrl, mail, positionJob, relationWords, removePerson }) => {
   const [relationWordsState] = useState(relationWords);
 
@@ -39,7 +46,7 @@ const PersonNote = ({ id, title, awatarUrl, mail, positionJob, relationWords, re
     <StyledWrapper>
       <AwatarPerson src={awatarUrl} />
       <StyledParagraphs>
-        <h1>{title}</h1>
+        <StyledH1>{title}</StyledH1>
         <p>{mail}</p>
         <p>{positionJob}</p>
         {relationWordsState.map((item) => (

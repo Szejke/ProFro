@@ -1,9 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const AwatarPerson = styled.img`
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  ${({ unradius }) =>
+    unradius &&
+    css`
+      border-radius: 0;
+    `}
 `;
 
 export default AwatarPerson;

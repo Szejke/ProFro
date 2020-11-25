@@ -5,26 +5,38 @@ import AwatarPerson from 'components/atoms/AwatarPerson/AwatarPerson';
 
 const StyledWrapper = styled.div`
   display: flex;
-  box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
+
+  box-shadow: 0px -2px 53px -6px rgba(0, 0, 0, 0.75);
   overflow: hidden;
   border-radius: 10px;
   padding: 2%;
-  max-width: 70rem;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  margin: 2rem;
 `;
 
 const StyledParagraphs = styled.div`
   margin-left: 30px;
+  text-decoration: none;
+`;
+const StyledH2 = styled.h2`
+  color: ${({ theme }) => theme.colorPrimary};
+`;
+const StyledA = styled.a`
+  text-decoration: none;
 `;
 
-const PersonAbout = ({ name, image, description, link }) => (
+const PersonAbout = ({ name, image, description, link, unradius }) => (
   <StyledWrapper>
-    <AwatarPerson alt={name} src={image} />
+    {unradius ? (
+      <AwatarPerson alt={name} src={image} />
+    ) : (
+      <AwatarPerson unradius alt={name} src={image} />
+    )}
     <StyledParagraphs>
-      <h2>{name}</h2>
+      <StyledH2>{name}</StyledH2>
       <p>{description}</p>
-      <a href={link}>Visit Page</a>
+      <StyledA href={link}>Visit Page</StyledA>
     </StyledParagraphs>
   </StyledWrapper>
 );
@@ -34,9 +46,11 @@ PersonAbout.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string,
   link: PropTypes.string.isRequired,
+  unradius: PropTypes.string,
 };
 
 PersonAbout.defaultProps = {
+  unradius: null,
   description: '',
 };
 

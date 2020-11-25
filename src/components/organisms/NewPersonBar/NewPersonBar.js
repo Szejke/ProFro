@@ -18,6 +18,11 @@ const StyledWrapper = styled.div`
 const StyledButton = styled.div`
   padding: 3%;
 `;
+
+const Styledh1 = styled.h1`
+  color: ${({ theme }) => theme.colorPrimary};
+`;
+
 const StyledInputs = styled.div`
   display: flex;
   flex-direction: column;
@@ -50,7 +55,7 @@ const NewPersonBar = ({ handleClose, addPerson }) => {
 
   return (
     <StyledWrapper>
-      <h1> Create New Worker </h1>
+      <Styledh1> Create New Worker </Styledh1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <StyledInputs>
           <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
