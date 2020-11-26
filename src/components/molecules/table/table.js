@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 const StyledWrapper = styled.div`
-  minwidth: 650;
+  min-width: 650;
 `;
 
 const LinksHeader = () => (
@@ -21,7 +21,6 @@ const LinksHeader = () => (
             <TableCell>Name</TableCell>
             <TableCell align="right">Mail</TableCell>
             <TableCell align="right">Position</TableCell>
-            <TableCell align="right">etc</TableCell>
             <TableCell align="right">etc</TableCell>
           </TableRow>
         </TableHead>
