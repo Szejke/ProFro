@@ -1,24 +1,41 @@
+import IconButton from '@material-ui/core/IconButton';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import { PhotoCamera } from '@material-ui/icons';
 import styled from 'styled-components';
-import { IconButton } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import LinkHeader from 'components/atoms/LinkHeader/LinkHeader';
 
-const Button = styled(IconButton)`
+const StyledSvgIcon = styled(SvgIcon)`
   && {
-    color: white;
-    padding: 0;
-    background-color: ${({ theme }) => theme.colorPrimary};
-    width: 220px;
-    height: 47px;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    &:hover {
-      color: white;
-      background-color: ${({ theme }) => theme.colorTertiary};
-    }
+    color: black;
   }
 `;
 
-export default Button;
+const StyledWrapper = styled.div``;
+
+const StyledParagraf = styled(LinkHeader)`
+  && {
+    min-width: 150px;
+  }
+`;
+
+const IButton = ({ paragraf, icon }) => (
+  <StyledWrapper>
+    <IconButton>
+      <StyledSvgIcon fontSize="large" component={icon} />
+      {paragraf ? <StyledParagraf>{paragraf}</StyledParagraf> : 'ysk'}
+    </IconButton>
+  </StyledWrapper>
+);
+
+IButton.propTypes = {
+  paragraf: PropTypes.string,
+  icon: PropTypes.element,
+};
+
+IButton.defaultProps = {
+  paragraf: false,
+  icon: PhotoCamera,
+};
+
+export default IButton;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MailInputs from 'components/organisms/MailInputs/MailInputs';
+import FormSettingsMail from 'components/organisms/FormSettingsMail/FormSettingsMail';
 import LeftSidebar from 'components/organisms/LeftSidebar/LeftSidebar';
 
 const StyledWrapper = styled.div`
@@ -15,7 +15,7 @@ const SystemEmails = () => (
   <StyledWrapper>
     <LeftSidebar />
     <StyledContent>
-      <MailInputs />
+      <FormSettingsMail />
     </StyledContent>
   </StyledWrapper>
 );
