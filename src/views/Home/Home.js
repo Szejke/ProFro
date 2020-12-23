@@ -7,7 +7,7 @@ import { Fab } from '@material-ui/core';
 import NewPersonBar from 'components/organisms/NewPersonBar/NewPersonBar';
 
 const StyledWrapper = styled.div`
-  position: relative;
+  margin-top: 20px;
 `;
 
 const StyledButton = styled.div`

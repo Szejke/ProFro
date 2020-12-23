@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import Table from './table';
+import MailInputs from './MailInputs';
 
-storiesOf('molecules/Table', module)
+storiesOf('organisms/MailInputs', module)
   .addDecorator(withKnobs)
-  .add('Table', () => {
-    return <Table />;
+  .add('MailInputs', () => {
+    return <MailInputs />;
   });

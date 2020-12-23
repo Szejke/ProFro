@@ -8,9 +8,9 @@ import { connect } from 'react-redux';
 import { addPersonAction } from 'actions';
 
 const StyledWrapper = styled.div`
+  margin-top: 20px;
   display: flex;
   background: white;
-  margin-left: auto;
   padding: 2%;
   width: 50%;
   flex-direction: column;
@@ -36,7 +36,7 @@ const Input = styled(TextField)`
   }
 `;
 
-const NewPersonBar = ({ handleClose, addPerson }) => {
+const MailInputs = ({ handleClose, addPerson }) => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit = (values, e) => {
@@ -78,7 +78,7 @@ const NewPersonBar = ({ handleClose, addPerson }) => {
   );
 };
 
-NewPersonBar.propTypes = {
+MailInputs.propTypes = {
   handleClose: PropTypes.func.isRequired,
   addPerson: PropTypes.func.isRequired,
 };
@@ -87,4 +87,4 @@ const mapDispatchToProps = (dispatch) => ({
   addPerson: (itemContent) => dispatch(addPersonAction(itemContent)),
 });
 
-export default connect(null, mapDispatchToProps)(NewPersonBar);
+export default connect(null, mapDispatchToProps)(MailInputs);

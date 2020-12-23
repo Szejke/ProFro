@@ -13,7 +13,6 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 8px 10px rgba(36, 36, 36, 0.09);
-  margin-bottom: 20px;
 `;
 
 const StyledLogo = styled.div`

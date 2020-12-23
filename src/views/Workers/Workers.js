@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import DrawerLeft from 'components/organisms/DrawerLeft/DrawerLeft';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -8,10 +7,6 @@ const StyledWrapper = styled.div`
   justify-content: center;
 `;
 
-const Workers = () => (
-  <StyledWrapper>
-    <DrawerLeft />
-  </StyledWrapper>
-);
+const Workers = () => <StyledWrapper>Workers</StyledWrapper>;
 
 export default Workers;

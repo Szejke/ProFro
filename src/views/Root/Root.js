@@ -6,6 +6,7 @@ import store from 'store';
 import About from 'views/About/About';
 import Home from 'views/Home/Home';
 import SystemEmails from 'views/SystemEmails/SystemEmails';
+import SettingsMail from 'views/SettingsMail/SettingsMail';
 import Workers from 'views/Workers/Workers';
 
 function Root() {
@@ -17,6 +18,7 @@ function Root() {
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/system-emails" component={SystemEmails} />
+            <Route exact path="/setting-emails" component={SettingsMail} />
             <Route exact path="/workers" component={Workers} />
           </Switch>
         </MainTemplate>
