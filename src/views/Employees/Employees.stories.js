@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import StoryRouter from 'storybook-react-router';
 
-import Workers from './Workers';
+import Employees from './Employees';
 
-storiesOf('views/Workers', module)
+storiesOf('views/Employees', module)
   .addDecorator(withKnobs)
   .addDecorator(StoryRouter())
-  .add('Workers', () => {
-    return <Workers />;
+  .add('Employees', () => {
+    return <Employees />;
   });

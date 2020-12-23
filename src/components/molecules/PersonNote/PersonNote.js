@@ -44,7 +44,12 @@ const PersonNote = ({ id, title, awatarUrl, mail, positionJob, relationWords, re
 
   return (
     <StyledWrapper>
-      <AwatarPerson src={awatarUrl} />
+      <AwatarPerson
+        src={awatarUrl}
+        onError={(e) => {
+          e.target.src = defaultAvatar;
+        }}
+      />
       <StyledParagraphs>
         <StyledH1>{title}</StyledH1>
         <p>{mail}</p>

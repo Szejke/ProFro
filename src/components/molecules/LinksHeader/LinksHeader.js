@@ -12,8 +12,8 @@ const LinksHeader = () => (
     <LinkHeader as={Link} to="/">
       Home
     </LinkHeader>
-    <LinkHeader as={Link} to="/workers">
-      Workers
+    <LinkHeader as={Link} to="/Employees">
+      Employees
     </LinkHeader>
     <LinkHeader as={Link} to="/system-emails">
       System Emails
