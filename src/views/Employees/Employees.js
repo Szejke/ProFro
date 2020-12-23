@@ -7,6 +7,6 @@ const StyledWrapper = styled.div`
   justify-content: center;
 `;
 
-const Workers = () => <StyledWrapper>Workers</StyledWrapper>;
+const Employees = () => <StyledWrapper>Employees</StyledWrapper>;
 
-export default Workers;
+export default Employees;

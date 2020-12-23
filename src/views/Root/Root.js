@@ -7,7 +7,7 @@ import About from 'views/About/About';
 import Home from 'views/Home/Home';
 import SystemEmails from 'views/SystemEmails/SystemEmails';
 import SettingsMail from 'views/SettingsMail/SettingsMail';
-import Workers from 'views/Workers/Workers';
+import Employees from 'views/Employees/Employees';
 
 function Root() {
   return (
@@ -19,7 +19,7 @@ function Root() {
             <Route exact path="/about" component={About} />
             <Route exact path="/system-emails" component={SystemEmails} />
             <Route exact path="/setting-emails" component={SettingsMail} />
-            <Route exact path="/workers" component={Workers} />
+            <Route exact path="/Employees" component={Employees} />
           </Switch>
         </MainTemplate>
       </BrowserRouter>
