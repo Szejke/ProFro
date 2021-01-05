@@ -1,15 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import MailInputs from 'components/organisms/MailInputs/MailInputs';
+import TablePerson from 'components/molecules/TablePerson/TablePerson';
 
 const StyledWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   padding: 5rem;
+`;
+const StyledH1 = styled.h1`
+  color: ${({ theme }) => theme.colorPrimary};
 `;
 
 const SystemEmails = () => (
   <StyledWrapper>
+    <StyledH1>Mail System</StyledH1>
     <MailInputs />
+    <TablePerson />
   </StyledWrapper>
 );
 
