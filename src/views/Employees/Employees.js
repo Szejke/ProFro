@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TablePerson from 'components/molecules/TablePerson/TablePerson';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -7,6 +8,10 @@ const StyledWrapper = styled.div`
   justify-content: center;
 `;
 
-const Employees = () => <StyledWrapper>Employees</StyledWrapper>;
+const Employees = () => (
+  <StyledWrapper>
+    <TablePerson />
+  </StyledWrapper>
+);
 
 export default Employees;

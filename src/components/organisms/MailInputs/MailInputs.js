@@ -23,10 +23,6 @@ const StyledButton = styled.div`
   padding: 3%;
 `;
 
-const StyledH1 = styled.h1`
-  color: ${({ theme }) => theme.colorPrimary};
-`;
-
 const StyledForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -57,7 +53,6 @@ const MailInputs = ({ handleClose, addPerson }) => {
   return (
     <StyledWrapper>
       <StyledForm>
-        <StyledH1> Mail </StyledH1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <StyledInputs>
             <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
