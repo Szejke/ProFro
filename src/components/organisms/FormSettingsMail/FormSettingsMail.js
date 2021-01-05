@@ -12,7 +12,6 @@ const StyledWrapper = styled.div`
   display: flex;
   background: white;
   padding: 2%;
-  width: 50%;
   flex-direction: column;
 `;
 
@@ -20,7 +19,7 @@ const StyledButton = styled.div`
   padding: 3%;
 `;
 
-const Styledh1 = styled.h1`
+const StyledH1 = styled.h1`
   color: ${({ theme }) => theme.colorPrimary};
 `;
 
@@ -50,7 +49,7 @@ const FormSettingsMail = ({ handleClose, addPerson }) => {
 
   return (
     <StyledWrapper>
-      <Styledh1> Settings Mail (SMTP) </Styledh1>
+      <StyledH1> Settings Mail (SMTP) </StyledH1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <StyledInputs>
           <Input

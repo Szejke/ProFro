@@ -8,6 +8,12 @@ import Home from 'views/Home/Home';
 import SystemEmails from 'views/SystemEmails/SystemEmails';
 import SettingsMail from 'views/SettingsMail/SettingsMail';
 import Employees from 'views/Employees/Employees';
+import LeftSidebar from 'components/organisms/LeftSidebar/LeftSidebar';
+import styled from 'styled-components';
+
+const StyledEmails = styled.div`
+  display: flex;
+`;
 
 function Root() {
   return (
@@ -17,9 +23,12 @@ function Root() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/system-emails" component={SystemEmails} />
-            <Route exact path="/setting-emails" component={SettingsMail} />
             <Route exact path="/Employees" component={Employees} />
+            <StyledEmails>
+              <LeftSidebar />
+              <Route exact path="/system-emails" component={SystemEmails} />
+              <Route exact path="/setting-emails" component={SettingsMail} />
+            </StyledEmails>
           </Switch>
         </MainTemplate>
       </BrowserRouter>

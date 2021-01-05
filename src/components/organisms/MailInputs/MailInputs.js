@@ -6,26 +6,32 @@ import Button from 'components/atoms/Button/Button';
 import { useForm } from 'react-hook-form';
 import { connect } from 'react-redux';
 import { addPersonAction } from 'actions';
+import DropZoneFiles from 'components/molecules/DropZoneFiles/DropZoneFiles';
 
 const StyledWrapper = styled.div`
-  margin-top: 20px;
   display: flex;
+  margin-top: 20px;
   background: white;
   padding: 2%;
-  width: 50%;
-  flex-direction: column;
+`;
+
+const StyledDropZone = styled.div`
+  padding: 1rem;
 `;
 
 const StyledButton = styled.div`
   padding: 3%;
 `;
 
-const Styledh1 = styled.h1`
+const StyledH1 = styled.h1`
   color: ${({ theme }) => theme.colorPrimary};
 `;
 
+const StyledForm = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const StyledInputs = styled.div`
-  justify-content: flex-end;
   display: flex;
   flex-direction: column;
 `;
@@ -50,30 +56,35 @@ const MailInputs = ({ handleClose, addPerson }) => {
 
   return (
     <StyledWrapper>
-      <Styledh1> Mail </Styledh1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <StyledInputs>
-          <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
-          <Input
-            id="reply-adress"
-            name="Reply Adress"
-            inputRef={register()}
-            label="Reply Adres"
-            variant="outlined"
-          />
-          <Input
-            id="areaInput"
-            name=""
-            multiline
-            inputRef={register()}
-            label="Message content"
-            variant="outlined"
-          />
+      <StyledForm>
+        <StyledH1> Mail </StyledH1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <StyledInputs>
+            <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
+            <Input
+              id="reply-adress"
+              name="Reply Adress"
+              inputRef={register()}
+              label="Reply Adres"
+              variant="outlined"
+            />
+            <Input
+              id="areaInput"
+              name=""
+              multiline
+              inputRef={register()}
+              label="Message content"
+              variant="outlined"
+            />
+          </StyledInputs>
           <StyledButton>
             <Button type="submit">Send Mail</Button>
           </StyledButton>
-        </StyledInputs>
-      </form>
+        </form>
+      </StyledForm>
+      <StyledDropZone>
+        <DropZoneFiles />
+      </StyledDropZone>
     </StyledWrapper>
   );
 };
