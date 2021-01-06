@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import ListPersonNote from 'components/organisms/ListPersonNote/ListPersonNote';
 import Add from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';

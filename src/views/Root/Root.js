@@ -9,7 +9,7 @@ import SystemEmails from 'views/SystemEmails/SystemEmails';
 import SettingsMail from 'views/SettingsMail/SettingsMail';
 import Employees from 'views/Employees/Employees';
 import LeftSidebar from 'components/organisms/LeftSidebar/LeftSidebar';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const StyledEmails = styled.div`
   display: flex;

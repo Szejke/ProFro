@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { TextField, Paper, IconButton, Fab } from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
