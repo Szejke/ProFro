@@ -4,7 +4,7 @@ import { DropzoneArea } from 'material-ui-dropzone';
 
 const StyledWrapper = styled.div`
   display: flex;
-  height: 50%;
+  width: 100%;
 `;
 
 const DropZoneFiles = () => {

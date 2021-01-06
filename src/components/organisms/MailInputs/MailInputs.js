@@ -16,6 +16,7 @@ const StyledWrapper = styled.div`
 
 const StyledDropZone = styled.div`
   display: flex;
+  width: 100%;
   align-self: center;
 `;
 
@@ -66,7 +67,7 @@ const MailInputs = () => {
           />
           <Input
             id="areaInput"
-            name=""
+            name="Area Input"
             multiline
             inputRef={register()}
             label="Message content"
