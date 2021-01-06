@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { TextField } from '@material-ui/core';
 import Button from 'components/atoms/Button/Button';
 import { useForm } from 'react-hook-form';
@@ -9,27 +9,28 @@ import { addPersonAction } from 'actions';
 import DropZoneFiles from 'components/molecules/DropZoneFiles/DropZoneFiles';
 
 const StyledWrapper = styled.div`
-  display: flex;
   margin-top: 20px;
   background: white;
   padding: 2%;
 `;
 
 const StyledDropZone = styled.div`
-  padding: 1rem;
+  display: flex;
+  align-self: center;
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+`;
+const StyledInputs = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledButton = styled.div`
-  padding: 3%;
-`;
-
-const StyledForm = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const StyledInputs = styled.div`
-  display: flex;
-  flex-direction: column;
+  align-self: flex-end;
+  padding-left: 5rem;
 `;
 
 const Input = styled(TextField)`
@@ -38,55 +39,56 @@ const Input = styled(TextField)`
   }
 `;
 
-const MailInputs = ({ handleClose, addPerson }) => {
+const MailInputs = () => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit = (values, e) => {
     const form = {
       ...values,
     };
-    addPerson(form);
+    console.log(form);
+    // addPerson(form);
     e.target.reset();
-    handleClose();
+    // handleClose();
   };
 
   return (
     <StyledWrapper>
-      <StyledForm>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <StyledInputs>
-            <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
-            <Input
-              id="reply-adress"
-              name="Reply Adress"
-              inputRef={register()}
-              label="Reply Adres"
-              variant="outlined"
-            />
-            <Input
-              id="areaInput"
-              name=""
-              multiline
-              inputRef={register()}
-              label="Message content"
-              variant="outlined"
-            />
-          </StyledInputs>
+      <StyledForm onSubmit={handleSubmit(onSubmit)}>
+        <StyledInputs>
+          <Input id="title" name="title" inputRef={register()} label="Title" variant="outlined" />
+          <Input
+            id="reply-adress"
+            name="Reply Adress"
+            inputRef={register()}
+            label="Reply Adres"
+            variant="outlined"
+          />
+          <Input
+            id="areaInput"
+            name=""
+            multiline
+            inputRef={register()}
+            label="Message content"
+            variant="outlined"
+            rows={10}
+            rowsMin={10}
+          />
+        </StyledInputs>
+        <StyledDropZone>
+          <DropZoneFiles />
           <StyledButton>
-            <Button type="submit">Send Mail</Button>
+            <Button type="submit"> PDF Analysis </Button>
           </StyledButton>
-        </form>
+        </StyledDropZone>
       </StyledForm>
-      <StyledDropZone>
-        <DropZoneFiles />
-      </StyledDropZone>
     </StyledWrapper>
   );
 };
 
 MailInputs.propTypes = {
-  handleClose: PropTypes.func.isRequired,
-  addPerson: PropTypes.func.isRequired,
+  // handleClose: PropTypes.func.isRequired,
+  // addPerson: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({

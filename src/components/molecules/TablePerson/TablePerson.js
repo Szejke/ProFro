@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import EventIcon from '@material-ui/icons/Event';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -75,6 +76,9 @@ const TablePerson = ({ workers }) => {
                     {relationWords
                       ? relationWords.map((item) => <span key={item.id}>{item.word} , </span>)
                       : console.log('error')}
+                  </TableCell>
+                  <TableCell>
+                    <EventIcon />
                   </TableCell>
                 </TableRow>
               );
