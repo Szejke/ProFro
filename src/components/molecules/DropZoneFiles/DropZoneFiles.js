@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { DropzoneArea } from 'material-ui-dropzone';
 
 const StyledWrapper = styled.div`

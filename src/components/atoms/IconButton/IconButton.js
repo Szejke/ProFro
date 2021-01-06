@@ -1,7 +1,7 @@
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import { PhotoCamera } from '@material-ui/icons';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import LinkHeader from 'components/atoms/LinkHeader/LinkHeader';
 

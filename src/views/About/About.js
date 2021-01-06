@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import PersonAbout from 'components/molecules/PersonAbout/PersonAbout';
 import { aboutInfo } from 'data/about';
 

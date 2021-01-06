@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import MailInputs from 'components/organisms/MailInputs/MailInputs';
 import TablePerson from 'components/molecules/TablePerson/TablePerson';
 
