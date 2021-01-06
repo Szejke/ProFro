@@ -6,6 +6,7 @@ import TablePerson from 'components/molecules/TablePerson/TablePerson';
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 5rem;
 `;
 const StyledH1 = styled.h1`
