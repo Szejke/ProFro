@@ -8,7 +8,6 @@ import LogoImage from 'assets/Logo.png';
 const StyledWrapper = styled.div`
   display: flex;
   padding: 0;
-  height: 80px;
   background: white;
   justify-content: space-between;
   align-items: center;

@@ -73,9 +73,11 @@ const TablePerson = ({ workers }) => {
                   <TableCell>{mail}</TableCell>
 
                   <TableCell>
-                    {relationWords
-                      ? relationWords.map((item) => <span key={item.id}>{item.word} , </span>)
-                      : console.log('error')}
+                    {relationWords ? (
+                      relationWords.map((item) => <span key={item.id}>{item.word} , </span>)
+                    ) : (
+                      <></>
+                    )}
                   </TableCell>
                   <TableCell>
                     <EventIcon />

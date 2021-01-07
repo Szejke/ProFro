@@ -35,8 +35,12 @@ const StyledButton = styled.div`
 `;
 
 const Input = styled(TextField)`
+  margin: 2rem 2rem 0 0;
   && {
     margin: 2rem 2rem 0 0;
+  }
+  textarea {
+    resize: vertical;
   }
 `;
 
@@ -66,14 +70,21 @@ const MailInputs = () => {
             variant="outlined"
           />
           <Input
-            id="areaInput"
+            id="reply-adress"
+            name="Reply Adress"
+            inputRef={register()}
+            label="Reply Adres"
+            variant="outlined"
+          />
+
+          <Input
+            id="area-input"
             name="Area Input"
             multiline
             inputRef={register()}
             label="Message content"
             variant="outlined"
-            rows={10}
-            rowsMin={10}
+            rows={6}
           />
         </StyledInputs>
         <StyledDropZone>
