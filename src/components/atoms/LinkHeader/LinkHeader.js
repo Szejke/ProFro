@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-const LinkHeader = styled.a`
+const LinkHeader = styled.span`
   display: block;
   position: relative;
   padding: 10px 15px;
@@ -8,10 +8,11 @@ const LinkHeader = styled.a`
   font-family: 'Montserrat', sans-serif;
   font-weight: 550;
   text-decoration: none;
+  height: 100%;
   cursor: pointer;
 
   &:hover {
-    color: hsl(212, 100%, 96%);
+    color: hsl(0deg 0% 41%);
   }
 `;
 

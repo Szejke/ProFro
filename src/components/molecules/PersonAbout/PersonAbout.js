@@ -46,11 +46,11 @@ PersonAbout.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string,
   link: PropTypes.string.isRequired,
-  unradius: PropTypes.string,
+  unradius: PropTypes.bool,
 };
 
 PersonAbout.defaultProps = {
-  unradius: null,
+  unradius: false,
   description: '',
 };
 

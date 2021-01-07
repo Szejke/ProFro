@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import PropTypes from 'prop-types';
+
 import { TextField } from '@material-ui/core';
 import Button from 'components/atoms/Button/Button';
 import { useForm } from 'react-hook-form';
@@ -35,16 +35,15 @@ const Input = styled(TextField)`
   }
 `;
 
-const FormSettingsMail = ({ handleClose, addPerson }) => {
+const FormSettingsMail = () => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit = (values, e) => {
     const form = {
       ...values,
     };
-    addPerson(form);
+    console.log(form);
     e.target.reset();
-    handleClose();
   };
 
   return (
@@ -75,7 +74,7 @@ const FormSettingsMail = ({ handleClose, addPerson }) => {
           />
           <Input
             id="port"
-            name=""
+            name="Port"
             multiline
             inputRef={register()}
             label="Port"
@@ -90,10 +89,7 @@ const FormSettingsMail = ({ handleClose, addPerson }) => {
   );
 };
 
-FormSettingsMail.propTypes = {
-  handleClose: PropTypes.func.isRequired,
-  addPerson: PropTypes.func.isRequired,
-};
+FormSettingsMail.propTypes = {};
 
 const mapDispatchToProps = (dispatch) => ({
   addPerson: (itemContent) => dispatch(addPersonAction(itemContent)),

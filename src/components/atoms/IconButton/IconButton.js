@@ -7,11 +7,17 @@ import LinkHeader from 'components/atoms/LinkHeader/LinkHeader';
 
 const StyledSvgIcon = styled(SvgIcon)`
   && {
-    color: black;
+    color: ${({ theme }) => theme.colorPrimary};
   }
 `;
 
 const StyledWrapper = styled.div``;
+
+const StyledButton = styled(IconButton)`
+  && {
+    border-radius: 0%;
+  }
+`;
 
 const StyledParagraf = styled(LinkHeader)`
   && {
@@ -21,16 +27,16 @@ const StyledParagraf = styled(LinkHeader)`
 
 const IButton = ({ paragraf, icon }) => (
   <StyledWrapper>
-    <IconButton>
+    <StyledButton>
       <StyledSvgIcon fontSize="large" component={icon} />
-      {paragraf ? <StyledParagraf>{paragraf}</StyledParagraf> : 'ysk'}
-    </IconButton>
+      {paragraf ? <StyledParagraf>{paragraf}</StyledParagraf> : null}
+    </StyledButton>
   </StyledWrapper>
 );
 
 IButton.propTypes = {
   paragraf: PropTypes.string,
-  icon: PropTypes.element,
+  icon: PropTypes.oneOfType([PropTypes.object]),
 };
 
 IButton.defaultProps = {

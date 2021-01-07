@@ -21,6 +21,9 @@ const StyledWrapper = styled.div`
 const StyledLink = styled.div`
   display: flex;
   flex-direction: column;
+  a {
+    text-decoration: none;
+  }
 `;
 
 const StyledButton = styled(IButton)`
