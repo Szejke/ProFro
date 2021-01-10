@@ -1,23 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/macro';
 import { DropzoneArea } from 'material-ui-dropzone';
-import Button from '@material-ui/core/Button';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const StyledWrapper = styled.div`
   display: flex;
   width: 100%;
 `;
 
-const DropZoneFiles = () => {
-  const [files, setFiles] = useState([]);
-
+const DropZoneFiles = ({ setFiles }) => {
   const handleChange = (file) => {
     setFiles(file);
-    console.log('handleChange', file);
-  };
-  const handleClick = () => {
-    console.log('handleClick', files);
   };
 
   return (
@@ -30,12 +23,11 @@ const DropZoneFiles = () => {
         filesLimit={20}
         onChange={(file) => handleChange(file)}
       />
-      <Button variant="contained" color="primary" onClick={() => handleClick()}>
-        Add Image
-      </Button>
     </StyledWrapper>
   );
 };
-DropZoneFiles.propTypes = {};
+DropZoneFiles.propTypes = {
+  setFiles: PropTypes.func.isRequired,
+};
 
 export default DropZoneFiles;
