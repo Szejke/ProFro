@@ -70,14 +70,6 @@ const MailInputs = () => {
             variant="outlined"
           />
           <Input
-            id="reply-adress"
-            name="Reply Adress"
-            inputRef={register()}
-            label="Reply Adres"
-            variant="outlined"
-          />
-
-          <Input
             id="area-input"
             name="Area Input"
             multiline
@@ -88,7 +80,7 @@ const MailInputs = () => {
           />
         </StyledInputs>
         <StyledDropZone>
-          <DropZoneFiles />
+          <DropZoneFiles inputRef={register()} />
           <StyledButton>
             <Button type="submit"> PDF Analysis </Button>
           </StyledButton>
