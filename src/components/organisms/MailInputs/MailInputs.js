@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 // import PropTypes from 'prop-types';
 import { TextField } from '@material-ui/core';
@@ -46,12 +46,14 @@ const Input = styled(TextField)`
 
 const MailInputs = () => {
   const { handleSubmit, register } = useForm();
+  const [files, setFiles] = useState();
 
   const onSubmit = (values, e) => {
     const form = {
       ...values,
     };
     console.log(form);
+    console.log(files);
     // addPerson(form);
     e.target.reset();
     // handleClose();
@@ -80,7 +82,7 @@ const MailInputs = () => {
           />
         </StyledInputs>
         <StyledDropZone>
-          <DropZoneFiles inputRef={register()} />
+          <DropZoneFiles setFiles={setFiles} />
           <StyledButton>
             <Button type="submit"> PDF Analysis </Button>
           </StyledButton>
